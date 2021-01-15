@@ -4,13 +4,14 @@ by Jack McGraw
 
 ### Weather Fetcher Hack A Thingy
 
-I chose to grab data from a weather API using react + redux. You can input which city you would like to see weather for. The web app should behave as you would expect a standard form on the internet to behave.
+I chose to grab data from a weather API using react + redux. You can input which city you would like to see the weather for. The web app should behave as you would expect a standard form on the internet to behave.
 
 TODO: [swagger](https://swagger.io/) + [nestjs](https://docs.nestjs.com/) backend to keep exploring some more tools & frameworks.
 
 ### Run locally
 
 - Install yarn & node
+- I left the API key in `env.js` instead of moving it to `.env`
 - `yarn start` to open `localhost:3000`
 
 ### Requirements
