@@ -29,7 +29,7 @@ export const weatherSlice = createSlice({
         windSpeed,
       } = action.payload;
       state.name = name;
-      state.longituded = longitude;
+      state.longitude = longitude;
       state.latitude = latitude;
       state.temp = temp;
       state.tempFeelsLike = tempFeelsLike;
@@ -38,13 +38,28 @@ export const weatherSlice = createSlice({
       state.humidity = humidity;
       state.windSpeed = windSpeed;
     },
+    resetWeatherData: (state) => {
+      state.name = '';
+      state.longitude = '';
+      state.latitude = '';
+      state.temp = '';
+      state.tempFeelsLike = '';
+      state.tempMin = '';
+      state.tempMax = '';
+      state.humidity = '';
+      state.windSpeed = '';
+    },
     setFetchStatus: (state, action) => {
       state.fetchStatus = action.payload;
     },
   },
 });
 
-export const { setWeatherData, setFetchStatus } = weatherSlice.actions;
+export const {
+  setWeatherData,
+  resetWeatherData,
+  setFetchStatus,
+} = weatherSlice.actions;
 
 export const selectFetchStatus = (state) => state.weather.fetchStatus;
 
